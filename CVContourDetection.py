@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
-image = cv2.imread('K12_ 6Triangles_1_EG.png')
+image = cv2.imread('Images/K12_ 6Triangles_1_EG.png')
 cv2.waitKey(0)
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -20,7 +20,7 @@ x = cv2.drawContours(image, contours, -1, (0, 255, 0), 3)
 
 plt.figure()
 plt.title('Notebook opened on desk near books')
-plt.imsave('TriangleEdgeContours.png', x, cmap='gray', format='png')
+plt.imsave('Results/TriangleEdgeContours.png', x, cmap='gray', format='png')
 
 cv2.imshow('Contours', image)
 cv2.waitKey(0)
